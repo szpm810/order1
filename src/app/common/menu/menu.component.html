@@ -1,0 +1,19 @@
+<div class="main">
+   <h1>メインメニュー</h1> 
+     <div class="menu">
+   　<h2><img src="/assets/icon/icon-folder-close.png"width="30" height="30">メンテナンスメニュー</h2> 
+            <ul>
+                  <li>
+                    <a [routerLink]="['/main/Customer']"style="text-decoration:none"><img src="/assets/icon/icon-openfolderalt.png">顧客表メンテナンス画面（{{ custCount }}件）</a>
+                </li>
+                <li>
+                  <a [routerLink]="['/main/Employees']" style="text-decoration:none"><img src="/assets/icon/icon-openfolderalt.png">社員表メンテナンス画面（件）</a>
+                </li>
+                <div class="order">
+                <li>
+                  <a [routerLink]="['Order']"style="text-decoration:none"><img src="/assets/icon/icon-openfolderalt.png" width="30" height="20">注文入力</a>
+                </li>
+                </div>
+            </ul>
+      </div>
+</div>

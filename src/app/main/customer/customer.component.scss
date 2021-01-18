@@ -1,0 +1,130 @@
+div.title h2{
+  float: left;
+}
+
+div.title button {
+  float: right;
+}
+
+.cust_table{
+  clear: both;
+  display: block;
+}
+
+table {
+  // clear: both;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 auto;
+}
+
+thead, tbody {
+  display: block;
+}
+
+tbody{
+  overflow: scroll;
+  height: 300px;
+}
+
+tr:hover td {
+  background-color: seashell;
+}
+
+tr.active td {
+  background-color: seashell;
+}
+
+tr.active {
+  border: solid 2px black;
+}
+
+th, td {
+  table-layout: fixed;
+  border: solid 1px black;
+  box-sizing: border-box;
+}
+
+th {
+  background-color: #e0e0e0;
+  box-shadow: 0px -20px 20px 0px rgba(0, 0, 0, 0.20) inset;
+}
+
+td {
+  background-color: white;
+}
+
+.custno{
+  width: 70px;
+  text-align: center;
+}
+
+.cname{
+  width: 200px;
+}
+
+.address{
+  width: 300px;
+}
+
+.phone{
+  width: 130px;
+  text-align: center;
+}
+
+.credit_rating{
+  width: 70px;
+  text-align: center;
+}
+
+div.center {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 5px auto;
+}
+
+span {
+  margin: auto 0;
+  width: 100px;
+  float: left;
+  clear: both;
+}
+
+input {
+  padding: 5px;
+}
+
+select {
+  width: auto;
+  padding: 5px;
+}
+
+.button {
+  margin: 10px;
+  padding: 10px;
+  clear: both;
+  text-align: center;
+}
+
+button {
+  position: relative;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  border: solid .5px black;
+  border-radius: 5px;
+  box-shadow: 0px -20px 20px 0px rgba(0, 0, 0, 0.35) inset;
+}
+
+button.excel {
+  width: 120px;
+}
+
+img.icon-button {
+  position: absolute;
+  top: 30%;
+  left: 10px;
+}

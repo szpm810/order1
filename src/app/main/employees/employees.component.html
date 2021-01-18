@@ -1,0 +1,309 @@
+<!-- <app-sds-header [displayMode]="aa"></app-sds-header>
+
+<div id="contFrame" class="cntMain cnt-cmn" role="main">
+  <form class="UserEdit">
+    <div id="pageFrame">
+      <div class="cmnPage">
+        <div class="cmnEdit">
+          <div class="cmnTable">
+            <div class="container">
+              <div class="innerHead">
+                <div class="block-pageTit">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                      <h2>MSDS照会画面</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="innerBody">
+                <div class="block-bdArticle">
+                  <div class="artBody">
+                    <table class="table-condensed table-bordered">
+                      <tr>
+                        <th class="col-xs-12 col-sm-2">
+                          <label>社員番号</label>
+                        </th>
+                        <td class="col-xs-12 col-sm-10">
+                          <ng-container>
+                            <div class="col-xs-12 col-sm-2 text-nowrap">
+                              <button type="button" class="btn-cmn btn-plane-edit btn-GRN01PL">
+                                <span class="small">{{employees.empno}}</span>
+                              </button>
+                            </div>
+                          </ng-container>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="col-xs-12 col-sm-2">
+                          <label>メーカー名</label>
+                        </th>
+                        <td class="col-xs-12 col-sm-10">
+                          <label>{{employees.ename}}</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="col-xs-12 col-sm-2">
+                          <label>メーカー商品名</label>
+                        </th>
+                        <td class="col-xs-12 col-sm-10">
+                          <label>{{exampleInfo.makerpronames}}</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="col-xs-12 col-sm-2">
+                          <label>化学名</label>
+                        </th>
+                        <td class="col-xs-12 col-sm-10">
+                          <label>{{exampleInfo.chemi}}</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="col-xs-12 col-sm-2">
+                          <label>KND商品コード</label>&nbsp;
+                        </th> 
+                        <td class="col-xs-12 col-sm-10">
+                          <label>{{exampleInfo.code}}</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="col-xs-12 col-sm-2">
+                          <label>管理種別</label>
+                        </th>
+                        <td class="col-xs-12 col-sm-10">
+                          <label>{{exampleInfo. shubetsu}}</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="col-xs-12 col-sm-2">
+                          <label>KMD商品名</label>
+                        </th>
+                        <td class="col-xs-12 col-sm-10">
+                          <label>{{exampleInfo.kmdname}}</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="col-xs-12 col-sm-2">
+                          <label>KMD荷姿コード</label>
+                        </th>
+                        <td class="col-xs-12 col-sm-10">
+                          <label>{{exampleInfo.kmdncode}}</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="col-xs-12 col-sm-2">
+                          <label>KMD規格コード</label>
+                        </th>
+                        <td class="col-xs-12 col-sm-10">
+                          <label>{{exampleInfo.kmdkcode}}</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="col-xs-12 col-sm-2">
+                          <label>メーカー作成日</label>&nbsp;
+                        </th>
+                        <td class="col-xs-12 col-sm-10">
+                          <label>{{exampleInfo.makermdate | date:'YY/MM/dd'}}</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="col-xs-12 col-sm-2">
+                          <label>メーカー更新日</label>&nbsp;
+                        </th>
+                        <td class="col-xs-12 col-sm-10">
+                          <label>{{exampleInfo.makerupdate | date:'YY/MM/dd'}}</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="col-xs-12 col-sm-2">
+                          <label>カネダ受領者</label>
+                        </th>
+                        <td class="col-xs-12 col-sm-10">
+                          <label>{{exampleInfo.kname}}</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="col-xs-12 col-sm-2">
+                          <label>廃番日</label>
+                        </th>
+                        <td class="col-xs-12 col-sm-10">
+                          <label>{{exampleInfo.haidate | date:'YY/MM/dd'}}</label>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <ng-container>
+                <div class="col-xs-12 col-sm-2 col-sm-offset-4">
+                  <button type="button" class="btn-cmn btn-plane-edit btn-GRY01PL">
+                    <i class="fa fa-reply fa-fw" aria-hidden="true"></i>
+                    <span class="small">戻る</span>
+                  </button>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div> -->
+
+
+
+<div class="customer">
+<h1><img class="icon" src="../../../assets/icon/icon-folder-close.png">社員表メンテナンス</h1>
+
+<label><font color="#ff0000">社員番号(*)</font></label>
+
+                              <div class="input-group form-group-no-border">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">
+                                  </span>
+                                </div>
+                                <input
+                                    ngModel
+                                    type="number" 
+                                    name="adress"
+                                    class="form-control"
+                                    required
+                                />
+      </div>          
+                                <label>社員名</label>
+                            <div class="input-group form-group-no-border">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="nc-icon nc-single-02"></i>
+                                </span>
+                              </div>
+
+                                <input
+                                ngModel
+                                type="text" 
+                                name="ename"
+                                class="form-control"
+                                placeholder="社員名を入力。"
+                                required
+                                />
+                            </div>
+
+                            <label>よみがな</label>
+                            <div class="input-group form-group-no-border">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="nc-icon nc-single-02"></i>
+                                </span>
+                              </div>
+
+                                <input
+                                ngModel
+                                type="text" 
+                                name="yomi"
+                                class="form-control"
+                                placeholder="よみがなを入力。"
+                                pattern="^[ぁ-ん]+$ , [\u3041-\u309F]*"
+                                required                  
+                                />
+                            </div>
+
+                            <label>職務</label>
+                            <div class="input-group form-group-no-border">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="nc-icon nc-single-02"></i>
+                                </span>
+                              </div>
+
+                                <input
+                                ngModel
+                                type="text" 
+                                name="job"
+                                class="form-control"
+                                placeholder="職務を入力。"
+                                />
+                            </div>
+
+                            <label>上司番号</label>
+                              <div class class="input-group form-group-no-border">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">
+                                  </span>
+                                </div>
+                                <input
+                                    ngModel
+                                    type="mgr" 
+                                    name="number"
+                                    class="form-control"
+                                />
+      </div>          
+
+
+                            <label>入社日</label>
+                            <div class="input-group form-group-no-border">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="nc-icon nc-single-02"></i>
+                                </span>
+                              </div>
+
+                                <input
+                                ngModel
+                                type="date" 
+                                name="hiredate"
+                                class="form-control"
+                                placeholder="カレンダーの表示"
+                                pattern="\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}"
+                                />
+                            </div>
+                                
+<label>給料</label>
+                              <div class class="input-group form-group-no-border">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">
+                                  </span>
+                                </div>
+                                <input
+                                    ngModel
+                                    type="sal" 
+                                    name="number"
+                                    class="form-control"
+                                />
+      </div>          
+
+      <label>歩合給</label>
+                              <div class class="input-group form-group-no-border">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">
+                                  </span>
+                                </div>
+                                <input
+                                    ngModel
+                                    type="comm" 
+                                    name="telphone"
+                                    class="form-control"
+                                    pattern="\d{2,4}-\d{3,4}-\d{3,4}"
+                                    required
+                                />
+      </div>     
+
+      <label>部門番号</label>
+      <select name=" 部門番号" >
+        <option value="選択してください">　</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+      </select>
+
+      
+      <button type="button" i class="btn btn-default" aria-label="Left Align">追加</button>
+
+      <button type="button" i class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span>更新</button>
+
+      <button type="button" i class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span>削除</button>
+
+      <button type="button" i class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span>クリア</button>
+
+</div>

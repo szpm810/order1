@@ -1,0 +1,134 @@
+<div class="title">
+  <h2>
+    <img class="icon" src="../../../assets/icon/icon-folder-close.png" />
+    顧客表メンテナンス
+  </h2>
+  <button class="excel" (click)="exportExcel()">
+    <img class="icon-button" src="../../../assets/icon/icon-download-alt.png" />
+    Excel作成
+  </button>
+</div>
+<br>
+<div class="cust_table">
+  <table>
+    <thead>
+      <tr>
+        <th class="custno">顧客番号</th>
+        <th class="cname">顧客名</th>
+        <th class="address">住所</th>
+        <th class="phone">電話番号</th>
+        <th class="credit_rating">信用</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let customer of customers"
+        (click)="selectRow(customer)"
+        [routerLink]="[customer.CUSTNO]"
+        routerLinkActive="active"
+      >
+        <td class="custno">{{ customer.CUSTNO }}</td>
+        <td class="cname">{{ customer.CNAME }}</td>
+        <td class="address">{{ customer.ADDRESS }}</td>
+        <td class="phone">{{ customer.PHONE }}</td>
+        <td class="credit_rating">{{ customer.CREDIT_RATING }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br />
+<form class="input-aria" #editForm="ngForm" (ngSubmit)="addCustomer(editForm)">
+  <div class="center">
+    <label for="custno">
+      <span>顧客番号* </span>
+      <input
+        ngModel
+        name="custno"
+        type="number"
+        id="custno"
+        [ngModel]="selectCustomer.CUSTNO"
+        required
+        placeholder=""
+      />
+    </label>
+    <label for="cname">
+      <span>顧客名 </span>
+      <input
+        ngModel
+        name="cname"
+        type="text"
+        id="cname"
+        [ngModel]="selectCustomer.CNAME"
+        placeholder="顧客名を入力してください。"
+      />
+    </label>
+    <label for="address">
+      <span>住所 </span>
+      <input
+        ngModel
+        name="address"
+        type="text"
+        id="address"
+        [ngModel]="selectCustomer.ADDRESS"
+        placeholder="住所を入力してください。"
+      />
+    </label>
+    <label for="phone">
+      <span>電話番号 </span>
+      <!-- patternに指定された値以外が入力されると、invalid Error となり、ボタンがdisabledになる -->
+      <input
+        ngModel
+        name="phone"
+        type="tel"
+        placeholder="oo-oooo-oooo"
+        id="phone"
+        [ngModel]="selectCustomer.PHONE"
+      />
+    </label>
+    <label for="credit_rating">
+      <span>信用 </span>
+      <select
+        ngModel
+        name="credit_rating"
+        id="credit_rating"
+        [ngModel]="selectCustomer.CREDIT_RATING"
+      >
+        <option value="">選択してください</option>
+        <option value="優良">優良</option>
+        <option value="良">良</option>
+        <option value="要注意">要注意</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="button">
+    <button type="submit" [disabled]="editForm.invalid">
+      <img class="icon" src="../../../assets/icon/icon-circleadd.png" />追加
+    </button>
+    <button
+      type="button"
+      [disabled]="editForm.invalid"
+      (click)="updateCustomer(editForm)"
+    >
+      <img class="icon-button" src="../../../assets/icon/icon-editalt.png" />
+      更新
+    </button>
+    <button
+      type="button"
+      (click)="deleteCustomer(editForm); clearForm(editForm)"
+    >
+      <img
+        class="icon-button"
+        src="../../../assets/icon/icon-circledelete.png"
+      />
+      削除
+    </button>
+    <button type="button" (click)="clearForm(editForm); ngOnInit()">
+      <img
+        class="icon-button"
+        src="../../../assets/icon/icon-cut-scissors.png"
+      />
+      クリア
+    </button>
+  </div>
+</form>
